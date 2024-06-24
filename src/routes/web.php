@@ -6,8 +6,8 @@ use Aman5537jains\AbnCmsAdminTheme\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get("/cpadmin/login",function(){
-    $abno360URL = (new Abno360Service)->loginURL('',route('AbnCmsAdminTheme-dashboard'));
-    return AbnCms::getActiveTheme("BACKEND_ACTIVE_THEME")->setLayout("login")->render(["abno360URL"=>$abno360URL]);
+
+    return AbnCms::getActiveTheme("BACKEND_ACTIVE_THEME")->setLayout("login")->render(["abno360URL"=>""]);
 })->middleware("web")->name("admin-login");
 
 Route::post("/cpadmin/post-login",[AuthController::class,"postAdminLogin"])->middleware("web")->name("admin-post-login");
