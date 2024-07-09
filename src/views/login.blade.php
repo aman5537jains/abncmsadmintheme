@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{$theme->getSetting('FAV_ICON')}}">
 
         {!! $theme->loadStylesheets() !!}
-        
+
 </head>
  <body >
     <div style='flex-direction:column' class="page-dashboard dlogin-panel">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="dLogin-form">
-           
+
                      @if(session("error"))  <div style='color:red;text-align:center' >{{ session("error") }}</div> @endif
 
                 <form method="POST" action="{{ route('admin-post-login') }}" id='admin-login' autocomplete='off' >
@@ -56,15 +56,15 @@
                         <a class="buttons theme" href="javascript:;" type="submit" name="button"><img src="{{url('public/asset/images/loader.gif')}}" class="loader_img"> </a>
                     </div>
 
-                     {{-- <h2>or</h2>
+                       <h2>or</h2>
                      <div class="dlogin-action form-button">
                         <a class="buttons theme" href='{{$abno360URL}}' name="button">Login with Abno360</a>
-                    </div> --}}
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-   
+
 
 </body>
 {!! $theme->loadScripts() !!}
