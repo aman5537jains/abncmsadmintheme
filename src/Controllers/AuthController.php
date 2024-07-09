@@ -45,7 +45,7 @@ class AuthController extends AbnCmsBackendController{
            }
 
         }catch(\Exception $e){
-dd($e);
+         dd($e);
 
             return redirect()->back()->with("error","Invalid credentials");
 
@@ -80,23 +80,23 @@ dd($e);
                 $admin_id = Auth::guard('web')->user()->id;
 
                 $user =  User::whereId($admin_id)->first();
-                
+
 
                 if (Hash::check($request->get('old_password'), $user->password))
                 {
-                   
+
                     $user->password = Hash::make($request->get('new_password'));
                     $user->save();
                     Session::flash('success', 'Password updated successfully');
                     return redirect()->route('dashboard');
-                } 
+                }
                 else
                 {
                     Session::flash('warning', 'Wrong old password');
                     return redirect()->back();
                 }
 
-              
+
 
            }
 

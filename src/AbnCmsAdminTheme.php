@@ -15,8 +15,8 @@ class AbnCmsAdminTheme extends Theme{
         parent::__construct();
 
         $this->addStylesheets([
-            new StylesheetLoader(asset('vendor/AbnCmsBackendTheme/css/dashboard.css') ),
-            new StylesheetLoader(asset('vendor/AbnCmsBackendTheme/css/custom.css') ),
+            new StylesheetLoader(asset('/vendor/AbnCmsBackendTheme/css/dashboard.css') ),
+            new StylesheetLoader(asset('/vendor/AbnCmsBackendTheme/css/custom.css') ),
 
         ]);
 

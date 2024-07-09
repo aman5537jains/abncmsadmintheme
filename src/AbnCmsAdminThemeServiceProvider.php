@@ -15,11 +15,15 @@ class AbnCmsAdminThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../assets' => public_path('vendor/AbnCmsBackendTheme'),
+          ], 'assets');
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/views', 'AbnCmsAdminTheme');
         $this->publishes([
             __DIR__.'/views' => base_path('resources/views/vendor/AbnCmsAdminTheme'),
         ]);
+
     }
 
 
