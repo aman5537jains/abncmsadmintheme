@@ -15,14 +15,14 @@ class AbnCmsAdminTheme extends Theme{
         parent::__construct();
 
         $this->addStylesheets([
-            new StylesheetLoader(asset('public/asset/css/dashboard.css') ),
-            new StylesheetLoader(asset('public/asset/css/custom.css') ),
+            new StylesheetLoader(asset('vendor/AbnCmsBackendTheme/css/dashboard.css') ),
+            new StylesheetLoader(asset('vendor/AbnCmsBackendTheme/css/custom.css') ),
 
         ]);
 
         $this->addScripts([
-            new ScriptLoader(asset('public/asset/scripts/jQuery.js')),
-            new ScriptLoader(asset('public/asset/scripts/dashScript.js')),
+            new ScriptLoader(asset('vendor/AbnCmsBackendTheme/scripts/jQuery.js')),
+            new ScriptLoader(asset('vendor/AbnCmsBackendTheme/scripts/dashScript.js')),
             (new ScriptLoader(" $('.has-child > a').on('click', function(e) {
                 $(this).parent().siblings('.has-child').find('.dropdown-menu').slideUp();
                 $(this).parent().siblings('.has-child').removeClass('selected');
